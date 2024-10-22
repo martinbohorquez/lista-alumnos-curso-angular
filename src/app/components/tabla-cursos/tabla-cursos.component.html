@@ -1,0 +1,21 @@
+<h1>Cursos:</h1>
+<table class="table table-dark table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Materia</th>
+            <th scope="col">Dificultad</th>
+            <th scope="col">Requisito</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (curso of cursos; track $index; let id = $index) {
+        <tr>
+            <th scope="row">{{id + 1}}</th>
+            <td>{{curso.materia}}</td>
+            <td>{{curso.dificultad}}</td>
+            <td>{{curso.requisito}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
